@@ -1,9 +1,16 @@
 <framework>
+    <execution>
+        <clock enabled="true" unit="hz" value="100" />
+        <executionType>ONLY_MAIN_THREAD</executionType>
+    </execution>
     <modulesToEnable logLevel="WARN">
         <module>ogre_window_manager</module>
         <module>socket_data_receiver</module>
+        <module>socket_data_sender</module>
         <module>image_converter_scaleup</module>
         <module>image_renderer</module>
+        <module logLevel="DEBUG">ogre_input</module>
+        <module>ogre_input_to_car</module>
     </modulesToEnable>
     <module>
         <name>ogre_window_manager</name>
@@ -15,6 +22,13 @@
             <dataChannels>IMAGE</dataChannels>
             <ip>localhost</ip>
             <port>65002</port>
+        </config>
+    </module>
+    <module>
+        <name>socket_data_sender</name>
+        <config>
+            <ip>localhost</ip>
+            <port>65003</port>
         </config>
     </module>
     <module>
@@ -31,5 +45,55 @@
         <executionType>ONLY_MAIN_THREAD</executionType>
         <channelMapping from="IMAGE" to="IMAGE_HQ"/>
         <channelMapping priority="2" from="WINDOW" to="WINDOW"/>
+    </module>
+    <module>
+        <name>ogre_input</name>
+        <config>
+            <WINDOW>WINDOW</WINDOW>
+            <key>
+                <down>
+                    <Up>
+                        <command>car</command>
+                        <content>acc_down</content>
+                    </Up>
+                    <Down>
+                        <command>car</command>
+                        <content>break_down</content>
+                    </Down>
+                    <Left>
+                        <command>car</command>
+                        <content>left</content>
+                    </Left>
+                    <Right>
+                        <command>car</command>
+                        <content>right</content>
+                    </Right>
+                </down>
+                <up>
+                    <Up>
+                        <command>car</command>
+                        <content>acc_up</content>
+                    </Up>
+                    <Down>
+                        <command>car</command>
+                        <content>break_up</content>
+                    </Down>
+                    <Left>
+                        <command>car</command>
+                        <content>left_up</content>
+                    </Left>
+                    <Right>
+                        <command>car</command>
+                        <content>right_up</content>
+                    </Right>
+                </up>
+            </key>
+        </config>
+    </module>
+    <module>
+        <name>ogre_input_to_car</name>
+        <config>
+            <acc>0.2</acc>
+        </config>
     </module>
 </framework>
