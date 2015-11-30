@@ -94,6 +94,9 @@
         <name>ogre_input_to_car</name>
         <config>
             <acc>0.2</acc>
+            <minSpeed>-1</minSpeed>
+            <maxSpeed>1</maxSpeed>
+            <steeringAngle>0.392699</steeringAngle>
         </config>
     </module>
 </framework>

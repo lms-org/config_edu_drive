@@ -18,11 +18,13 @@ bool OgreInputToCar::deinitialize() {
 bool OgreInputToCar::cycle() {
     sensor_utils::Car::State state;
 
+    float steeringAngle = config().get<float>("steeringAngle", M_PI/8);
+
     for(const std::string &msg : messaging()->receive("car")) {
         if(msg == "left") {
-            steering = M_PI / 8;
+            steering = steeringAngle;
         } else if(msg == "right") {
-            steering = - M_PI / 8;
+            steering = - steeringAngle;
         } else if(msg == "acc_down") {
             accelerationState = 1;
         } else if(msg == "acc_up") {
@@ -43,7 +45,10 @@ bool OgreInputToCar::cycle() {
         speed = 0;
     }
 
-    speed = std::max(float(-1), std::min(speed, float(1)));
+    float minSpeed = config().get<float>("minSpeed");
+    float maxSpeed = config().get<float>("maxSpeed");
+
+    speed = std::max(float(minSpeed), std::min(speed, float(maxSpeed)));
 
     state.name = "keyboard";
     state.steering_front = steering;
@@ -51,7 +56,7 @@ bool OgreInputToCar::cycle() {
     state.targetSpeed = speed;
     car->putState(state);
 
-    logger.error("SPEED") << speed;
+    logger.debug() << speed << " " << steering;
 
     lastCycle = lms::extra::PrecisionTime::now();
 
