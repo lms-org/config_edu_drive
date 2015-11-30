@@ -1,0 +1,6 @@
+    <modulesToEnable logLevel="WARN">
+        <module>camera_tower_controller</module>
+    </modulesToEnable>
+    <module>
+        <name>camera_tower_controller</name>
+    </module>

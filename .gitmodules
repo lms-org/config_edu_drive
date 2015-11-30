@@ -43,3 +43,9 @@
 [submodule "external/libraries/math_lib"]
 	path = external/libraries/math_lib
 	url = https://github.com/lms-org/math_lib.git
+[submodule "external/modules/usb_sense_link"]
+	path = external/modules/usb_sense_link
+	url = https://github.com/tum-phoenix/usb_sense_link
+[submodule "external/libraries/sense_link"]
+	path = external/libraries/sense_link
+	url = https://github.com/tum-phoenix/sense_link
