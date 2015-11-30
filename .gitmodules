@@ -52,3 +52,7 @@
 [submodule "external/libraries/sense_link"]
 	path = external/libraries/sense_link
 	url = https://github.com/tum-phoenix/sense_link.git
+[submodule "external/modules/usb_sense_link"]
+	path = external/modules/usb_sense_link
+	url = https://github.com/tum-phoenix/usb_sense_link
+
