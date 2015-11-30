@@ -1,0 +1,27 @@
+<framework>
+    <modulesToEnable logLevel="WARN">
+        <module>ueye_importer</module>
+        <module>image_converter_scaledown</module>
+        <module>socket_data_sender</module>
+    </modulesToEnable>
+    <module>
+        <name>ueye_importer</name>
+        <config src="ueye.lconf" />
+    </module>
+    <module>
+        <name>image_converter_scaledown</name>
+        <realName>image_converter</realName>
+        <channelMapping from="INPUT_IMAGE" to="CAMERA_IMAGE"/>
+        <channelMapping from="OUTPUT_IMAGE" to="IMAGE"/>
+        <config>
+            <scaleDown>4</scaleDown>
+        </config>
+    </module>
+    <module>
+        <name>socket_data_sender</name>
+        <config>
+            <ip>localhost</ip>
+            <port>65002</port>
+        </config>
+    </module>
+</framework>

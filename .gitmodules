@@ -1,3 +1,45 @@
 [submodule "LMS"]
 	path = LMS
 	url = https://github.com/Phibedy/LMS
+[submodule "external/libraries/cereal"]
+	path = external/libraries/cereal
+	url = https://github.com/syxolk/cereal.git
+[submodule "external/libraries/imaging"]
+	path = external/libraries/imaging
+	url = https://github.com/lms-org/imaging.git
+[submodule "external/libraries/mavlink-messages-c"]
+	path = external/libraries/mavlink-messages-c
+	url = https://github.com/tum-phoenix/mavlink-messages-c.git
+[submodule "external/libraries/ogre_binding"]
+	path = external/libraries/ogre_binding
+	url = https://github.com/lms-org/ogre_binding
+[submodule "external/libraries/socket_connection"]
+	path = external/libraries/socket_connection
+	url = https://github.com/lms-org/socket_connection
+[submodule "external/libraries/sensor_utils"]
+	path = external/libraries/sensor_utils
+	url = https://github.com/lms-org/sensor_utils.git
+[submodule "external/modules/image_converter"]
+	path = external/modules/image_converter
+	url = https://github.com/lms-org/image_converter.git
+[submodule "external/modules/image_renderer"]
+	path = external/modules/image_renderer
+	url = https://github.com/lms-org/image_renderer.git
+[submodule "external/modules/mavlink_usb_importer"]
+	path = external/modules/mavlink_usb_importer
+	url = https://github.com/tum-phoenix/mavlink_usb_importer
+[submodule "external/modules/ogre_input"]
+	path = external/modules/ogre_input
+	url = https://github.com/lms-org/ogre_input.git
+[submodule "external/modules/ogre_window_manager"]
+	path = external/modules/ogre_window_manager
+	url = https://github.com/lms-org/ogre_window_manager.git
+[submodule "external/modules/socket_data"]
+	path = external/modules/socket_data
+	url = https://github.com/lms-org/socket_data.git
+[submodule "external/modules/ueye_importer"]
+	path = external/modules/ueye_importer
+	url = https://github.com/lms-org/ueye_importer.git
+[submodule "external/libraries/math_lib"]
+	path = external/libraries/math_lib
+	url = https://github.com/lms-org/math_lib.git
