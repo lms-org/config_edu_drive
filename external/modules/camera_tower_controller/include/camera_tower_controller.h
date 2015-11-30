@@ -7,6 +7,7 @@
 #include "lms/math/vertex.h"
 #include "sense_link/datatypes.h"
 #include "sense_link/actuators.h"
+#include "sensor_utils/car.h"
 
 class TowerController : public lms::Module {
 public:
@@ -14,7 +15,12 @@ public:
     bool deinitialize();
     bool cycle();
 private:
-    //lms::WriteDataChannel<CameraData> cameraData;
+    lms::WriteDataChannel<sensor_utils::Car> cameraTowerControlls;
+    lms::extra::PrecisionTime lastCycle;
+    float servoHorizontal;
+    float servoVertical;
+    int verticalState;
+    int horizontalState;
 };
 
 #endif // TO_ARDUIONO_H
