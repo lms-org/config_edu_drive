@@ -56,3 +56,12 @@
 	path = external/modules/usb_sense_link
 	url = https://github.com/tum-phoenix/usb_sense_link
 
+[submodule "external/libraries/gamepad_lib"]
+	path = external/libraries/gamepad_lib
+	url = https://github.com/lms-org/gamepad_lib.git
+[submodule "external/modules/gamepad_controller"]
+	path = external/modules/gamepad_controller
+	url = https://github.com/lms-org/gamepad_controller.git
+[submodule "external/modules/gamepad_visualizer"]
+	path = external/modules/gamepad_visualizer
+	url = https://github.com/syxolk/gamepad_visualizer.git
