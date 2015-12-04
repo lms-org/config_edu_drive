@@ -65,3 +65,6 @@
 [submodule "external/modules/gamepad_visualizer"]
 	path = external/modules/gamepad_visualizer
 	url = https://github.com/syxolk/gamepad_visualizer.git
+[submodule "external/modules/gamepad_car_controller"]
+	path = external/modules/gamepad_car_controller
+	url = https://github.com/tum-phoenix/gamepad_car_controller.git
