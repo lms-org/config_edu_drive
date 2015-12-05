@@ -1,0 +1,20 @@
+<framework>
+    <modulesToEnable logLevel="DEBUG">
+        <module>sfml_sound_player</module>
+        <module>sound_controller</module>
+    </modulesToEnable>
+    <module>
+        <name>sfml_sound_player</name>
+        <config>
+            <sounds>RPM_Low.wav,RPM_Med.wav,RPM_High.wav</sounds>
+        </config>
+    </module>
+    <module>
+        <name>sound_controller</name>
+        <config>
+            <sounds>RPM_Low.wav,RPM_Med.wav,RPM_High.wav</sounds>
+            <percent>0.3,0.6,1</percent>
+            <maxSpeed>1</maxSpeed>
+        </config>
+    </module>
+</framework>

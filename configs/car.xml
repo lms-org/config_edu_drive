@@ -57,5 +57,5 @@
             <config name="servo_front" src="sensor/servo_front.lconf" />
             <config name="servo_rear" src="sensor/servo_rear.lconf" />
             <config name="velocity" src="sensor/velocity.lconf" />
-        </module>
+      </module>
 </framework>

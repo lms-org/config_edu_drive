@@ -1,0 +1,37 @@
+<framework>
+    <include src="pc.xml" />
+    <modulesToEnable>
+        <module>gamepad_controller</module>
+        <module>gamepad_car_controller</module>
+        <module>gamepad_renderer</module>
+        <module>gamepad_visualizer</module>
+    </modulesToEnable>
+    <module>
+        <name>gamepad_controller</name>
+        <config>
+            <dataChannelName>GAMEPAD</dataChannelName>
+            <controller>Xbox,XBox,360</controller>
+            <type>xboxdrv</type>
+        </config>
+    </module>
+    <module>
+            <name>gamepad_visualizer</name>
+            <channelMapping from="IMAGE" to="GAMEPAD_IMAGE" />
+            <config>
+                <failSafeAfterMillis>1000</failSafeAfterMillis>
+            </config>
+    </module>
+    <module>
+        <name>gamepad_renderer</name>
+        <realName>image_renderer</realName>
+        <channelMapping from="IMAGE" to="GAMEPAD_IMAGE" />
+        <channelMapping from="WINDOW" to="GAMEPAD_WINDOW" />
+    </module>
+    <module>
+        <name>gamepad_car_controller</name>
+        <config>
+            <maxFrontServoRange>40</maxFrontServoRange>
+            <maxMotorRange>4</maxMotorRange>
+        </config>
+    </module>
+</framework>

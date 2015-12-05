@@ -1,6 +1,9 @@
+
+<framework>
     <modulesToEnable logLevel="WARN">
         <module>camera_tower_to_sense_link</module>
     </modulesToEnable>
     <module>
         <name>camera_tower_to_sense_link</name>
     </module>
+</framework>
