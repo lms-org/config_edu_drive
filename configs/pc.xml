@@ -99,4 +99,5 @@
             <steeringAngle>0.392699</steeringAngle>
         </config>
     </module>
+    <include src="sound.xml"/>
 </framework>
